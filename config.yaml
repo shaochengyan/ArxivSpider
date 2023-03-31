@@ -1,0 +1,26 @@
+kw_list:
+  "PCR": {
+    "PointCloud": [
+        ["PointCloud"], ["Point Cloud"], 
+    ], 
+    "PCR": [
+        ["Registration"], 
+        ["3D", "Descriptor"], 
+        ["3D", "Detector"], 
+        ["3D", "Detection"], 
+        ["Local", "Feature"], 
+        ["Match", "Matching"]
+    ], 
+    "Transformer": [
+        ["Transformer"]
+    ]
+  }
+  "Transformer": {
+    "Transfomer": [
+      ["Transformer"]
+    ]
+  }
+
+# save path
+arxiv_data_dir: "./data_all"
+map_data_dir: "./data_map"

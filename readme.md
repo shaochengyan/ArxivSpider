@@ -2,7 +2,8 @@
 **(1) Python enviroment**
 ```shell
 conda create -n env_spider python=3.9
-python -r requirements.txt
+conda activate env_spider
+pip install -r requirements.txt
 ```
 
 **(2) run it**

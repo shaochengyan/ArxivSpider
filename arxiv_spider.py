@@ -10,7 +10,7 @@ import yaml
 
 def create_dir(dir):
     if not os.path.isdir(dir):
-        os.mkdir(dir)
+        os.makedirs(dir)
 
 def get_config(yaml_file):
     """ brief
@@ -191,7 +191,7 @@ class MarkdownWriter:
 
         # 加粗 keywords
         Keywords_list = Keywords.split(" ")
-        print(Keywords_list)
+        # print(Keywords_list)
         abstract = info_dict["abstract"]
         for item in Keywords_list:
             pattern = re.compile("{}".format(item), re.IGNORECASE)
@@ -238,5 +238,5 @@ if __name__=="__main__":
     # 筛选文件 via kw_list
     domain_kw_dict = config["kw_list"]
     for domain_name, domain_kw in domain_kw_dict.items():
-        print(domain_name, domain_kw)
+        # print(domain_name, domain_kw)
         filter_and_kws_paper(domain_name, domain_kw)

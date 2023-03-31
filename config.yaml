@@ -23,4 +23,4 @@ kw_list:
 
 # save path
 arxiv_data_dir: "./data_all"
-map_data_dir: "./data_map"
+map_data_dir: "D:/DData/7.Papers/ArxivEveryDayPaper"

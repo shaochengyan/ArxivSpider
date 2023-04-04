@@ -11,8 +11,8 @@ kw_list:
         ["Local", "Feature"], 
         ["Match", "Matching"]
     ], 
-    "Transformer": [
-        ["Transformer"]
+    "PCR and Transformer": [
+        ["Registration", "Transformer"],
     ]
   }
   "Transformer": {
@@ -20,7 +20,11 @@ kw_list:
       ["Transformer"]
     ]
   }
-
+  "NeRF": {
+   "NeRF": [
+    ["NeRF"]
+   ]
+  }
 # save path
 arxiv_data_dir: "./data_all"
 map_data_dir: "D:/DData/7.Papers/ArxivEveryDayPaper"

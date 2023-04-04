@@ -145,15 +145,17 @@ class ArxivSpider:
             return
         url_all = url_all_papers_this_week()
         ids = get_today_all_paper_id(url_all)
+#        print(ids)
+#        return
         saver = JsonDumpReader(self.save_filename)
         total_num = len(ids)
         info_dict_list = []
-        for i, id in enumerate(ids[start:]):
+        for i, id in enumerate(ids):
             info_dict = get_paper_info_dict(id)
             print("{}/{}".format(i+1, total_num), id, " ", info_dict["title"])
             info_dict_list.append(info_dict)
-
-            # if i > 3 + start:
+            
+            # if i > 5:
             #     break
 
         saver.save(info_dict_list)
@@ -238,5 +240,5 @@ if __name__=="__main__":
     # 筛选文件 via kw_list
     domain_kw_dict = config["kw_list"]
     for domain_name, domain_kw in domain_kw_dict.items():
-        # print(domain_name, domain_kw)
+        print(domain_name, domain_kw)
         filter_and_kws_paper(domain_name, domain_kw)

@@ -132,7 +132,7 @@ class JsonDumpReader:
         if not self.is_exist:
             print("\"{}\" not exsits! Please first save it. ".format(self.filename))
         with open(self.filename, "r") as fp:
-            return fp.read()
+            return json.loads(fp.read())
 
 class ArxivSpider:
     def __init__(self, domain="cs.CV"):
@@ -208,7 +208,7 @@ def filter_and_kws_paper(md_name, keywords_dict):
     # 读取json信息并解析 -> 筛选关键词 -> 输出方便处理的形式
     filename = os.path.join(config["arxiv_data_dir"], "arxiv-{}.json".format(date.today()))
     reader = JsonDumpReader(filename)
-    data = json.loads(reader.read())
+    data = reader.read()
 
     # 筛选info dict
     papers_dict = dict()
